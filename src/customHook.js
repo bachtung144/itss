@@ -7,15 +7,14 @@ function CustomHook() {
         setName(e.target.value);
     }
     const handleSubmit = (e) => {
-        let tmp = arr;tmp.push(name);setArr(tmp);e.preventDefault();
+        let tmp = arr; tmp.push(name); setArr(tmp); e.preventDefault();
     }
     return (
         <div>
             <p>学生一覧: [{arr.map((item) => item + ',')}]</p>
             <p>追加する名前を入力してください</p>
             <form onSubmit={handleSubmit}>
-                <label>
-                    <input type="text" value={name} onChange={handleChange} /></label>
+                <label><input type="text" value={name} onChange={handleChange} /></label>
                 <input type="submit" value="確定" />
             </form>
             <p>追加する名前: {name}</p>
